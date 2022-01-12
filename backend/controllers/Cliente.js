@@ -1,6 +1,16 @@
 const database = require('../models');
 const moment = require('moment');
 
+  
+  
+
+function verifyAge(age) {
+    const yearNow = new Date().toLocaleTimeString();
+    const diff = yearNow - age;
+    return diff >= 18;
+}
+console.log(verifyAge)
+
 class clienteController {
     static async index(req, res) {
         try {
@@ -15,15 +25,19 @@ class clienteController {
         
     }
 
-
-
+    
     static async save (req, res) {
-        const newcliente =  req.body
-        
+        const newCliente =  req.body             
 
         try {
             
-            const createcliente = await database.Cliente.create(newcliente);
+            if (!verifyAge(newCliente.DataDeNascimento)) {
+            console.log(typeof dataDeNascimento) 
+            return res.status(400).json({error: `Usuário precisa ter mais de 18 anos para ser cadastrado`})
+                
+            }
+            
+            const createcliente = await database.Cliente.create(newCliente);
             return res.status(200).json(createcliente);
 
         } catch (error) {
