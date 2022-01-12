@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notEmpty: { msg: "O campo Nome precisa ser preenchido." },
         notNull: { msg: 'O campo Nome precisa ser preenchido' },
+   
       }
 
     },
@@ -28,8 +29,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        notEmpty: { msg: "O campo Nome precisa ser preenchido." },
-        notNull: { msg: 'O campo Nome precisa ser preenchido' }
+        notEmpty: { msg: "O campo Data de nascimento precisa ser preenchido." },
+        notNull: { msg: 'O campo Data de nascimento precisa ser preenchido' }
         
       }
     },

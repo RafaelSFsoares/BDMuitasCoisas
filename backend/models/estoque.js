@@ -17,7 +17,15 @@ module.exports = (sequelize, DataTypes) => {
   };
   Estoque.init({
     Quantidade: DataTypes.INTEGER,
-    Preço: DataTypes.DECIMAL
+    Preço: DataTypes.DECIMAL,
+    ProdutoID:{
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: { msg: "O campo ProdutoID precisa ser preenchido." },
+        notNull: { msg: 'O campo ProdutoID precisa ser preenchido' },
+   
+      }}
   }, {
     sequelize,
     modelName: 'Estoque',

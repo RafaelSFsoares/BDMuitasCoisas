@@ -63,7 +63,9 @@ class produtoController {
 
     static async remove(req, res){
         const {id} = req.params
-        try{
+     
+        try {
+                
             await database.Produto.destroy({
                 where: {
                     id:Number(id)
@@ -72,7 +74,9 @@ class produtoController {
             return res.status(200).json({mensagem: `id ${id} deletado`})
 
         }catch(error){
-            return res.status(500).json(error.message)
+            console.log(error)
+            return res.status(400).send({error: `status code 400.`})
+            
         }
     }
 }
