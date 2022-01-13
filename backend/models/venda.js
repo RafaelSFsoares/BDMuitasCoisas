@@ -18,14 +18,14 @@ module.exports = (sequelize, DataTypes) => {
   Venda.init({
     Codigo: DataTypes.INTEGER,
     Valor: DataTypes.STRING,
-    DataDeNascimento: DataTypes.DATE,
+    DataDaVenda: DataTypes.DATE,
     ClienteID:{
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
       notEmpty: { msg: "O campo ClienteID precisa ser preenchido." },
       notNull: { msg: 'O campo ClienteID precisa ser preenchido' },
- 
+    
     }}
   }, {
     sequelize,
