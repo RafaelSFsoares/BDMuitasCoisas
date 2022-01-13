@@ -34,6 +34,11 @@ $ git clone https://github.com/RafaelSFsoares/BDMuitasCoisas.git
 
 1. Importar o arquivo BancoDump no Mysql 
 2. Importar o arquivo BDMuitasCoisas.postman_collection no postman. 
+3. Agora basta rodar o banco através do terminal utilizando o scrprit: npm start
+
+
+
+
 
 
 ### 💻 Entre em contato:
