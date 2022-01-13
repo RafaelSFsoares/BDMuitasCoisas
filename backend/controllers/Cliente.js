@@ -4,12 +4,12 @@ const moment = require('moment');
   
   
 
-function verifyAge(age) {
-    const yearNow = new Date().toLocaleTimeString();
-    const diff = yearNow - age;
-    return diff >= 18;
+function verifyAge(age) {    
+   
+    const dateDiff = moment().diff(age,'days');  
+   
+    return parseFloat(dateDiff);
 }
-console.log(verifyAge)
 
 class clienteController {
     static async index(req, res) {
@@ -19,8 +19,7 @@ class clienteController {
             
         } catch (error) {
             return res.status(500).json(error.message);
-        }
-     
+        }     
 
         
     }
@@ -31,8 +30,8 @@ class clienteController {
 
         try {
             
-            if (!verifyAge(newCliente.DataDeNascimento)) {
-            console.log(typeof dataDeNascimento) 
+            if (verifyAge(newCliente.DataDeNascimento) < 6574.5) {
+             
             return res.status(400).json({error: `Usuário precisa ter mais de 18 anos para ser cadastrado`})
                 
             }
@@ -63,7 +62,7 @@ class clienteController {
             return res.status(200).json(updateCliente)
 
         }catch(error){
-            return res.status(500).json(error.message)
+            return res.status(400).send({error: `status code 400.`})
         }
     }
 
