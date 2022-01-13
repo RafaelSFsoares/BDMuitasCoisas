@@ -18,11 +18,25 @@
 ```
 $ git clone https://github.com/RafaelSFsoares/BDMuitasCoisas.git
 ```
+### 📋 Pré-requisitos para instalação 
+1. Instale NodeJS em seu computador. Baixe os arquivos do repositório Amassa aqui no GitHub. 
+
+2. Instale via terminal utilizando os seguintes comandos: 
+```
+ npm init
+ npm install -g
+ npm install express 
+ npm install mysql2 
+ npm install sequelize sequelize-cli path 
+ npm install cors
+ npm install --save-dev nodemon
+
 ### 📋 Requisitos:
 
 1. Importar o arquivo BancoDump no Mysql 
+2. Importar o arquivo BDMuitasCoisas.postman_collection no postman. 
 
-2. Utilizar o Postman para enviar informações para o banco. 
+
 
 
 
