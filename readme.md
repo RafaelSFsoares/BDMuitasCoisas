@@ -28,7 +28,6 @@ $ git clone https://github.com/RafaelSFsoares/BDMuitasCoisas.git
  npm install express 
  npm install mysql2 
  npm install sequelize sequelize-cli path 
- npm install cors
  npm install --save-dev nodemon
 
 ### 📋 Requisitos:
