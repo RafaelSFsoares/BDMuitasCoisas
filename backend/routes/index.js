@@ -4,10 +4,10 @@ const categoria = require('./categoriaRoutes');
 const cliente = require('./clienteRoutes');
 const venda = require('./vendaRoutes');
 const express = require('express');
-// const cors = require('cors');
+
 
 module.exports = app => {
-    // app.use(cors())
+    
     app.use(express.json());
     
     app.use((req, res, next) => {
