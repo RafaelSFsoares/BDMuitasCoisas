@@ -19,7 +19,7 @@
 $ git clone https://github.com/RafaelSFsoares/BDMuitasCoisas.git
 ```
 ### 📋 Pré-requisitos para instalação 
-1. Instale NodeJS em seu computador. Baixe os arquivos do repositório Amassa aqui no GitHub. 
+1. Instale NodeJS em seu computador. Baixe os arquivos do repositório BDMuitasCoisas aqui no GitHub. 
 
 2. Instale via terminal utilizando os seguintes comandos: 
 ```
