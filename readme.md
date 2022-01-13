@@ -8,7 +8,7 @@
 
 ## :running: Iniciando o projeto
 
-### Recomendamos que faça o download do Insomnia na sua maquina!
+### Recomendamos que faça o download do Postman na sua maquina!
 
 - [download Postman](https://www.postman.com/downloads/)
 
