@@ -23,7 +23,7 @@ class vendaController {
             return res.status(200).json(createvenda);
 
         } catch (error) {
-          return res.status(500).json(error.message);
+            return res.status(400).send({error: `status code 400.`})
 
         }
     } 
@@ -45,7 +45,7 @@ class vendaController {
             return res.status(200).json(updateVenda)
 
         }catch(error){
-            return res.status(500).json(error.message)
+            return res.status(400).send({error: `status code 400.`})
         }
     }
 

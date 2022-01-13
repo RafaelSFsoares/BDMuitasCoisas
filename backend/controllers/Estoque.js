@@ -35,7 +35,7 @@ class estoqueController {
             return res.status(200).json(createEstoque);
 
         } catch (error) {
-          return res.status(500).json(error.message);
+            return res.status(400).send({error: `status code 400.`})
 
         }
     } 
